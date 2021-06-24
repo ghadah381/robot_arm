@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+  
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+li{ color:gray;
+}
+button {
+  margin: auto;
+position: absolute;
+top: 61px;
+left: 65px;
+bottom: 0;
+right: 2;
+  height: 20px;
+}
+</style>
+<title>control panel</title>
+</head>
+<body>
+
+
+<h1>Control panel of Robot arm</h1>
+
+<ul>
+  <li>MOTOR 1</li>
+  <form name="form1" action="add.php" method="POST">
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" id="vol" name="motor1" min="0" max="180"
+             oninput="document.getElementById('fPrice').innerHTML = this.value" />
+      <label id="fPrice" style="padding-left:20px;"></label>
+  <li>MOTOR 2</li>
+   
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" id="vol1" name="motor2" min="0" max="180"
+  oninput="document.getElementById('fPrice1').innerHTML = this.value" />
+      <label id="fPrice1" style="padding-left:20px;"></label>
+
+  <li>MOTOR 3</li>
+   
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" id="vol2" name="motor3" min="0" max="180"
+  oninput="document.getElementById('fPrice2').innerHTML = this.value" />
+      <label id="fPrice2" style="padding-left:20px;"></label>
+
+  <li>MOTOR 4 </li>
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" class="slider"id="vol3" name="motor4" min="0" max="180"
+  oninput="document.getElementById('fPrice3').innerHTML = this.value" />
+      <label id="fPrice3" style="padding-left:20px;"></label>
+	  
+	  <li>MOTOR 5</li>
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" class="slider"id="vol4" name="motor5" min="0" max="180"
+  oninput="document.getElementById('fPrice4').innerHTML = this.value" />
+      <label id="fPrice4" style="padding-left:20px;"></label>
+	  
+	   <li>MOTOR 6</li>
+  <label for="vol">Volume (between 0 and 180):</label>
+  <input type="range" class="slider"id="vol5" name="motor6" min="0" max="180"
+  oninput="document.getElementById('fPrice5').innerHTML = this.value" />
+      <label id="fPrice5" style="padding-left:20px;"></label>
+</ul>
+<input type="submit" value="save" name="SAVE">
+
+</form>
+<form  action="select.php" method="post">
+<button type="submit">RUN </button>
+</form>
+</body>
+</html>
